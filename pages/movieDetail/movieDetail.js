@@ -35,6 +35,10 @@ Page({
       success(res) {
 
         console.log(res)
+        wx.setNavigationBarTitle({
+          title: res.data.title,
+        })
+
         that.setData({
           movieDetail: res.data,
           progress: res.data.rating.details["1"] + res.data.rating.details["2"] + res.data.rating.details["3"] + res.data.rating.details["4"] + res.data.rating.details["5"],

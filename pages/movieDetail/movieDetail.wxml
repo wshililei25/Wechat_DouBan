@@ -120,9 +120,35 @@
   </view>
   <scroll-view scroll-x class="v-video">
     <view class="v-video-list" wx:for="{{movieDetail.trailer_urls}}">
-      <video poster="https://img1.doubanio.com/img/trailer/medium/2566997598.jpg?1566897665" class="video-playactor" id="myVideo" src="https://video.hlwidc.com/QQVideo/play/vid/m06145psexs.html"></video>
+      <video class="video-playactor" id="myVideo" src="{{item}}"></video>
     </view>
   </scroll-view>
+
+  <view class="v-appraise">
+    <text class="t-playactor">短评</text>
+    <image class="grade-img" src="/images/right.png"></image>
+    <text class="t-playactor-num">全部{{movieDetail.popular_comments.length}}</text>
+    <view class="v-appraise-list" wx:for="{{movieDetail.popular_comments}}">
+      <view class="v-appraise-user">
+        <image class="img-appraise-user" src="{{item.author.avatar}}"></image>
+        <view class="v-appraise-userRight">
+          <view class="t-appraise-userName">{{item.author.name}}</view>
+          <view class="t-appraise-userDate">{{item.created_at}}</view>
+        </view>
+      </view>
+      <view class="t-appraise-content">{{item.content}}</view>
+      <view class="v-zan">
+        <image class="img-zan" src="/images/zan.png"></image>
+        <text class="t-zan">{{item.useful_count}}</text>
+      </view>
+      <view class="line-appraise"></view>
+    </view>
+    <view class="v-appraiseAll">
+      <text class="t-appraiseAll">查看全部评价</text>
+      <image class="grade-img" src="/images/right.png"></image>
+    </view>
+  </view>
+
 
 
 </view>

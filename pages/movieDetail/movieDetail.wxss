@@ -334,3 +334,75 @@ page {
   width: 450rpx;
   height: 280rpx;
 }
+
+.v-appraise {
+  padding: 15rpx;
+  border-radius: 10rpx;
+  background-color: #3d2e29;
+  margin-top: 30rpx;
+}
+
+.v-appraise-list {
+  margin-top: 20rpx;
+}
+
+.v-appraise-user {
+  display: flex;
+  flex-direction: row;
+}
+
+.img-appraise-user {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+
+.v-appraise-userRight {
+  margin-left: 15rpx;
+}
+
+.t-appraise-userName {
+  color: #fff;
+  font-size: 25rpx;
+}
+
+.t-appraise-userDate {
+  color: #beb4b2;
+  font-size: 21rpx;
+}
+
+.t-appraise-content {
+  color: #fff;
+  font-size: 23rpx;
+  margin-top: 20rpx;
+}
+
+.v-zan {
+  margin-top: 20rpx;
+}
+
+.img-zan {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.t-zan {
+  color: #beb4b2;
+  font-size: 25rpx;
+  margin-left: 10rpx;
+}
+
+.line-appraise {
+  width: 100%;
+  margin-top: 20rpx;
+  background-color: #4a3c3b;
+  height: 1rpx;
+}
+
+.v-appraiseAll {
+  margin-top: 15rpx;
+}
+.t-appraiseAll {
+  color: #fff;
+  font-size: 25rpx;
+}
