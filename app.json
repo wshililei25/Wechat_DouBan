@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/movieDetail/movieDetail",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "逗辦"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "电影",
+        "iconPath": "images/dianying.png",
+        "selectedIconPath": "images/dianying_s.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "查询",
+        "iconPath": "images/chaxun.png",
+        "selectedIconPath": "images/chaxun_s.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "影院",
+        "iconPath": "images/yingyuan.png",
+        "selectedIconPath": "images/yingyuan_s.png"
+      }
+    ]
+  }
+}

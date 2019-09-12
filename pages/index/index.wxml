@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="content">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" indicator-color="#fff" indicator-active-color="#1afa29">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <block wx:for="{{movies}}" wx="*this">
+    <view class="item" bindtap="itemClick" data-index="{{index}}">
+      <image class="item-image" src="{{item.images.small}}"></image>
+      <view class="item-text">
+        <view style="color:white">影片名称：{{item.title}}</view>
+        <view style="color:white">上映日期：{{item.pubdate}}</view>
+        <text style="color:white">评价：{{item.rating==""?0.0:item.rating}}分</text>
+      </view>
+    </view>
+  </block>
+</view>

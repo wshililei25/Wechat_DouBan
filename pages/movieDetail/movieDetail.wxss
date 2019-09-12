@@ -1,0 +1,336 @@
+/* pages/movieDetail/movieDetail.wxss */
+
+page {
+  background-color: #4a3a3a;
+}
+
+.content {
+  padding: 25rpx;
+}
+
+.movie-image {
+  width: 200rpx;
+  height: 275rpx;
+  float: left;
+  border-radius: 10rpx;
+}
+
+.title-view {
+  margin-right: 25rpx;
+  margin-left: 220rpx;
+  height: 275rpx;
+}
+
+.title {
+  color: #fff;
+  font-size: 35rpx;
+}
+
+.year {
+  color: #fff;
+}
+
+.date {
+  color: rgb(185, 184, 184);
+  margin-top: 30rpx;
+}
+
+.view-btn {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.btn-lock {
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10rpx;
+}
+
+.btn-lock-img {
+  float: left;
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.btn-lockIn {
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10rpx;
+}
+
+.btn-lockIn-img {
+  float: left;
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.view-grade {
+  background-color: rgb(49, 46, 46);
+  height: 200rpx;
+  margin-top: 50rpx;
+  border-radius: 10rpx;
+  padding: 15rpx;
+  align-content: center;
+}
+
+.grade-title {
+  color: #fff;
+  font-size: 22rpx;
+}
+
+.grade-img {
+  float: right;
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.grade-grade {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rpx;
+}
+
+.grade {
+  color: #fff;
+  font-size: 50rpx;
+}
+
+.view-star {
+  flex-direction: row;
+}
+
+.star-img {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.grade-grade-right {
+  width: 130rpx;
+  margin-left: 20rpx;
+  position: relative;
+  right: 0rpx;
+}
+
+.view-star1 {
+  height: 20rpx;
+  flex-direction: row;
+  position: relative;
+  right: 0rpx;
+  /* float: right; */
+}
+
+.view-star2 {
+  height: 20rpx;
+  flex-direction: row;
+  position: relative;
+  right: 0rpx;
+}
+
+.view-star3 {
+  height: 20rpx;
+  flex-direction: row;
+  position: relative;
+  right: 0rpx;
+  /* float: right; */
+}
+
+.view-star4 {
+  height: 20rpx;
+  flex-direction: row;
+  position: relative;
+  right: 0rpx;
+  /* float: right; */
+}
+
+.view-star5 {
+  height: 20rpx;
+  flex-direction: row;
+  position: relative;
+  right: 0rpx;
+  /* float: right; */
+}
+
+.star-img-m {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.grade-grade-progress {
+  width: 200rpx;
+  margin-left: 5rpx;
+}
+
+.progress1 {
+  margin-top: 8rpx;
+}
+
+.view-line {
+  height: 2rpx;
+  margin-top: 20rpx;
+  background-color: #544143;
+}
+
+.lockNumIn {
+  color: #887878;
+  font-size: 18rpx;
+  float: right;
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+}
+
+.lockNum {
+  color: #887878;
+  font-size: 18rpx;
+  float: right;
+  margin-top: 10rpx;
+}
+
+.v-goupiao {
+  height: 45rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.img-goupiao {
+  width: 80rpx;
+  height: 45rpx;
+}
+
+.t-goupiao {
+  color: #fff;
+  flex: 1;
+}
+
+.v-channel {
+  width: 100%;
+  height: 60rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.t-channel {
+  color: #887878;
+  font-size: 23rpx;
+}
+
+.v-genres {
+  height: 60rpx;
+  width: 150rpx;
+  border-radius: 25rpx;
+  margin-left: 15rpx;
+  background-color: #3e302f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.t-genres {
+  color: #fff;
+  font-size: 27rpx;
+}
+
+.img-genres {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.v-introduce {
+  color: #fff;
+  margin-top: 30rpx;
+}
+
+.t-introduce {
+  color: #fff;
+  margin-top: 30rpx;
+  font-size: 23rpx;
+}
+
+.v-playactor {
+  margin-top: 30rpx;
+}
+
+.t-playactor-num {
+  color: #887878;
+  font-size: 22rpx;
+  float: right;
+}
+
+.t-playactor {
+  color: #fff;
+}
+
+.v-playactor-list-v {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 15rpx;
+}
+
+.v-playactor-list {
+  width: 170rpx;
+}
+
+.img-playactor-list {
+  width: 150rpx;
+  height: 225rpx;
+  border-radius: 10rpx;
+}
+
+.t-playactor-list {
+  color: #fff;
+  font-size: 22rpx;
+}
+
+.v-video {
+  margin-top: 15rpx;
+  display: flex;
+  white-space: nowrap;
+}
+
+/* 隐藏scrollbar */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.v-video-list {
+  width: 480rpx;
+  display: inline-block;
+}
+
+.video-playactor {
+  width: 450rpx;
+  height: 280rpx;
+  border-radius: 10rpx;
+}
+
+.controls {
+  width: 450rpx;
+  height: 280rpx;
+}

@@ -1,0 +1,128 @@
+<!--pages/movieDetail/movieDetail.wxml-->
+<view class="content">
+  <view>
+    <image class="movie-image" src="{{movieDetail.images.small}}"></image>
+    <view class="title-view">
+      <view class="title">{{movieDetail.title}}</view>
+      <view class="year">({{movieDetail.year}})</view>
+      <view class="date">{{movieDetail.countries}} / {{movieDetail.genres}} / 上映时间：{{movieDetail.pubdates[1]}} / 片长：{{movieDetail.durations}}</view>
+      <view class="view-btn">
+        <button class="btn-lock">
+          <image class="btn-lock-img" src="/images/xiangkan.png"></image>
+          <view>想看</view>
+        </button>
+        <button class="btn-lockIn">
+          <image class="btn-lockIn-img" src="/images/kanguo.png"></image>
+          <view>看过</view>
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <view class="view-grade">
+    <view>
+      <text class="grade-title">豆瓣评分</text>
+      <image class="grade-img" src="/images/right.png"></image>
+    </view>
+
+    <view class="grade-grade">
+      <view class="grade-grade-left">
+        <text class="grade">{{movieDetail.rating.average}}</text>
+        <view class="view-star">
+          <block wx:for="{{[2,4,6,8,10]}}" wx:for-item="item">
+            <image class="star-img" wx:if="{{item > movieDetail.rating.average+1}}" src="/images/star.png"></image>
+            <image class="star-img" wx:elif="{{item === movieDetail.rating.average+1}}" src="/images/star_b.png"></image>
+            <image class="star-img" wx:else="{{item <= movieDetail.rating.average}}" src="/images/star_s.png"></image>
+          </block>
+        </view>
+      </view>
+
+      <view class="grade-grade-right">
+        <view class="view-star1">
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+        </view>
+        <view class="view-star2">
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+        </view>
+        <view class="view-star3">
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+        </view>
+        <view class="view-star4">
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+        </view>
+        <view class="view-star5">
+          <image class="star-img-m" src="/images/start_smal.png"></image>
+        </view>
+      </view>
+
+      <view class="grade-grade-progress">
+        <progress class="progress1" percent="{{progress5}}" stroke-width="5" backgroundColor="#503C3D" activeColor="#FAAF2A" border-radius="10" />
+        <progress class="progress1" percent="{{progress4}}" stroke-width="5" backgroundColor="#503C3D" activeColor="#FAAF2A" border-radius="10" />
+        <progress class="progress1" percent="{{progress3}}" stroke-width="5" backgroundColor="#503C3D" activeColor="#FAAF2A" border-radius="10" />
+        <progress class="progress1" percent="{{progress2}}" stroke-width="5" backgroundColor="#503C3D" activeColor="#FAAF2A" border-radius="10" />
+        <progress class="progress1" percent="{{progress1}}" stroke-width="5" backgroundColor="#503C3D" activeColor="#FAAF2A" border-radius="10" />
+      </view>
+    </view>
+
+    <view class="view-line"></view>
+    <view class="view-lockNum">
+      <text class="lockNum">{{movieDetail.wish_count}}人想看</text>
+      <text class="lockNumIn">{{movieDetail.collect_count}}人看过</text>
+    </view>
+  </view>
+
+  <view class="v-goupiao">
+    <image class="img-goupiao" src="/images/goupiao.png"></image>
+    <text class="t-goupiao">选座购票</text>
+    <image class="grade-img" src="/images/right.png"></image>
+  </view>
+
+  <view class="view-line"></view>
+
+  <view class="v-channel">
+    <text class="t-channel">所属频道</text>
+    <view class="v-genres" wx:for="{{movieDetail.genres}}">
+      <text class="t-genres">{{item}}</text>
+      <image class="img-genres" src="/images/right.png"></image>
+    </view>
+  </view>
+
+  <view class="v-introduce">简介</view>
+  <text class="t-introduce">{{movieDetail.summary}}</text>
+
+  <view class="v-playactor">
+    <text class="t-playactor">演职员</text>
+    <image class="grade-img" src="/images/right.png"></image>
+    <text class="t-playactor-num">全部{{movieDetail.casts.length}}</text>
+  </view>
+
+  <view class="v-playactor-list-v">
+    <view class="v-playactor-list" wx:for="{{movieDetail.casts}}">
+      <image class="img-playactor-list" src="{{item.avatars.small}}"></image>
+      <text class="t-playactor-list">{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class="v-playactor">
+    <text class="t-playactor">预告片</text>
+    <image class="grade-img" src="/images/right.png"></image>
+    <text class="t-playactor-num">全部{{movieDetail.trailer_urls.length}}</text>
+  </view>
+  <scroll-view scroll-x class="v-video">
+    <view class="v-video-list" wx:for="{{movieDetail.trailer_urls}}">
+      <video poster="https://img1.doubanio.com/img/trailer/medium/2566997598.jpg?1566897665" class="video-playactor" id="myVideo" src="https://video.hlwidc.com/QQVideo/play/vid/m06145psexs.html"></video>
+    </view>
+  </scroll-view>
+
+
+</view>

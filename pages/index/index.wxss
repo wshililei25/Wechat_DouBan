@@ -1,0 +1,40 @@
+/**index.wxss**/
+
+page {
+  height: 100%;
+  background-color: rgb(248, 246, 246);
+}
+
+.content {
+  min-height: 100%;
+}
+
+swiper {
+  height: 420rpx;
+}
+
+swiper image {
+  width: 100%;
+}
+
+.item {
+  background-color: #000;
+  margin-top: 10rpx;
+  height: 380rpx;
+}
+
+.item-image {
+  float: left;
+  width: 300rpx;
+  height: 380rpx;
+}
+
+.item-text {
+  margin-left: 320rpx;
+  padding-top: 45rpx;
+}
+
+.t-genres {
+  color: #fff;
+  font-size: 27rpx;
+}
