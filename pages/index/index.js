@@ -92,8 +92,14 @@ Page({
   itemClick(res) {
     console.log(res)
     var index = res.currentTarget.dataset.index;
+    var id = '';
+    if (this.data.showLeft) {
+      id = this.data.movies[index].id;
+    } else {
+      id = this.data.moviesFuture[index].id;
+    }
     wx.navigateTo({
-      url: '/pages/movieDetail/movieDetail?movieId=' + this.data.movies[index].id,
+      url: '/pages/movieDetail/movieDetail?movieId=' + id,
     })
   },
 
@@ -105,14 +111,12 @@ Page({
     });
 
     if (this.data.currentTab == 0) {
-      console.log('1111111111=');
       this.setData({
         showLeft: true,
         showRight: false
       })
 
     } else if (this.data.currentTab == 1) {
-      console.log('222222222222=');
       this.setData({
         showLeft: false,
         showRight: true
@@ -120,7 +124,5 @@ Page({
     };
     console.log('showRight=' + this.data.showRight);
   },
-
-
 
 })

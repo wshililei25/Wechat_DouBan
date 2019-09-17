@@ -40,6 +40,7 @@ Page({
         })
 
         that.setData({
+          movieId: options.movieId,
           movieDetail: res.data,
           progress: res.data.rating.details["1"] + res.data.rating.details["2"] + res.data.rating.details["3"] + res.data.rating.details["4"] + res.data.rating.details["5"],
         })
@@ -68,6 +69,15 @@ Page({
   bindplay: function(e) {
     this.setData({
       tab_image: "none"
+    })
+  },
+
+  /**
+   * 电影剧照
+   */
+  movieImgTap() {
+    wx.navigateTo({
+      url: '/pages/images/images?movieId=' + this.data.movieId,
     })
   },
 

@@ -1,7 +1,7 @@
 <!--pages/movieDetail/movieDetail.wxml-->
 <view class="content">
   <view>
-    <image class="movie-image" src="{{movieDetail.images.small}}"></image>
+    <image class="movie-image" src="{{movieDetail.images.small}}" bindtap="movieImgTap"></image>
     <view class="title-view">
       <view class="title">{{movieDetail.title}}</view>
       <view class="year">({{movieDetail.year}})</view>

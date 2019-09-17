@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/movieDetail/movieDetail",
+    "pages/images/images",
     "pages/logs/logs"
   ],
   "window": {

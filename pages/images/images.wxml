@@ -1,0 +1,11 @@
+<!--pages/images/images.wxml-->
+<view class="content">
+
+  <swiper>
+    <block wx:for="{{photos}}">
+      <swiper-item class="swiper-item">
+        <image src="{{item.thumb}}" mode="widthFix" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
