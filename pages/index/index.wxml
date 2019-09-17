@@ -1,21 +1,69 @@
 <!--index.wxml-->
 <view class="content">
+
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" indicator-color="#fff" indicator-active-color="#1afa29">
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{showLeft?imgUrls:imgUrlsFuture}}">
       <swiper-item>
         <image src="{{item}}" class="slide-image" />
       </swiper-item>
     </block>
   </swiper>
 
-  <block wx:for="{{movies}}" wx="*this">
-    <view class="item" bindtap="itemClick" data-index="{{index}}">
-      <image class="item-image" src="{{item.images.small}}"></image>
-      <view class="item-text">
-        <view style="color:white">影片名称：{{item.title}}</view>
-        <view style="color:white">上映日期：{{item.pubdate}}</view>
-        <text style="color:white">评价：{{item.rating==""?0.0:item.rating}}分</text>
+  <view class="swiper-tab" style="position:fixed;top:0;width:100%">
+    <view wx:for="{{tabStr}}" data-idx="{{index}}" class="tab-item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="tabTap">{{item}}</view>
+  </view>
+
+  <view class="{{currentTab==0?'v-Left':'v-Right'}}"></view>
+
+  <view class="{{showLeft?'view-show':'view-hide'}}">
+    <block wx:for="{{movies}}" wx="*this">
+      <view class="item" bindtap="itemClick" data-index="{{index}}">
+        <image class="item-image" src="{{item.images.small}}"></image>
+        <view class="item-text">
+          <text class="t-title" style="color:black">{{item.title}}</text>
+          <view class="v-grade">
+            <view class="view-star">
+              <block wx:for="{{[2,4,6,8,10]}}" wx:for-item="item1">
+                <image class="star-img" wx:if="{{item1 > item.rating+1}}" src="/images/star2.png"></image>
+                <image class="star-img" wx:elif="{{item1 === item.rating+1}}" src="/images/star_b.png"></image>
+                <image class="star-img" wx:else="{{item1 <= item.rating}}" src="/images/star_s.png"></image>
+              </block>
+            </view>
+            <text class="t-grade">{{item.rating}}</text>
+          </view>
+          <text class="t-date">{{item.pubdate}}</text>
+        </view>
+
+        <view class="v-right">
+          <view class="line"></view>
+          <view class="v-buy">
+            <text class="t-buy">购票</text>
+            <text class="t-num">{{item.collection}}人看过</text>
+          </view>
+        </view>
       </view>
-    </view>
-  </block>
+    </block>
+  </view>
+
+  <view class="{{showRight?'view-show':'view-hide'}}">
+    <block wx:for="{{moviesFuture}}" wx="*this">
+      <view class="item" bindtap="itemClick" data-index="{{index}}">
+        <image class="item-image" src="{{item.images.small}}"></image>
+        <view class="item-text">
+          <view class="t-title" style="color:black">{{item.title}}</view>
+          <text class="t-date">{{item.pubdate}}</text>
+        </view>
+
+        <view class="v-right">
+          <view class="line"></view>
+          <view class="v-buy">
+            <image class="img-lock" src="/images/lock.png"></image>
+            <text class="t-lock">想看</text>
+            <text class="t-num">{{item.collection}}人想看</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
 </view>

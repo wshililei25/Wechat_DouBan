@@ -29,10 +29,10 @@
       <view class="grade-grade-left">
         <text class="grade">{{movieDetail.rating.average}}</text>
         <view class="view-star">
-          <block wx:for="{{[2,4,6,8,10]}}" wx:for-item="item">
-            <image class="star-img" wx:if="{{item > movieDetail.rating.average+1}}" src="/images/star.png"></image>
-            <image class="star-img" wx:elif="{{item === movieDetail.rating.average+1}}" src="/images/star_b.png"></image>
-            <image class="star-img" wx:else="{{item <= movieDetail.rating.average}}" src="/images/star_s.png"></image>
+          <block wx:for="{{[2,4,6,8,10]}}" wx:for-item="item1">
+            <image class="star-img" wx:if="{{item1 > movieDetail.rating.average+1}}" src="/images/star.png"></image>
+            <image class="star-img" wx:elif="{{item1 === movieDetail.rating.average+1}}" src="/images/star_b.png"></image>
+            <image class="star-img" wx:else="{{item1 <= movieDetail.rating.average}}" src="/images/star_s.png"></image>
           </block>
         </view>
       </view>
@@ -119,8 +119,8 @@
     <text class="t-playactor-num">全部{{movieDetail.trailer_urls.length}}</text>
   </view>
   <scroll-view scroll-x class="v-video">
-    <view class="v-video-list" wx:for="{{movieDetail.trailer_urls}}">
-      <video class="video-playactor" id="myVideo" src="{{item}}"></video>
+    <view class="v-video-list" wx:for="{{movieDetail.trailers}}">
+      <video class="video-playactor" id="myVideo" src="{{item.resource_url}}" controls="true" objectFit="fill" show-center-play-btn='{{false}}' poster="{{item.medium}}"></video>
     </view>
   </scroll-view>
 
