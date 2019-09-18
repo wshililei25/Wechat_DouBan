@@ -1,0 +1,190 @@
+/* pages/playactorDetail/playactorDetail.wxss */
+
+page {
+  height: 100%;
+  background-color: #edf5f8;
+}
+
+.v-head {
+  padding: 25rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.uimg-user {
+  width: 155rpx;
+  height: 220rpx;
+  border-radius: 10rpx;
+}
+
+.v-head-right {
+  height: 220rpx;
+  margin-left: 25rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.t-name {
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.t-name-en {
+  margin-top: 20rpx;
+}
+
+.t-follow-num {
+  color: #92979a;
+  font-size: 23rpx;
+  margin-top: 10rpx;
+}
+
+.v-follow {
+  width: 120rpx;
+  height: 55rpx;
+  background-color: #41bb56;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15rpx;
+}
+
+.t-follow {
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.v-introduction-title {
+  padding-left: 25rpx;
+  font-weight: bold;
+}
+
+.v-introduction {
+  padding: 25rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.t-introduction {
+  flex: 1;
+  font-size: 26rpx;
+  margin-right: 25rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.img-introduction {
+  width: 30rpx;
+  height: 30rpx;
+  float: right;
+}
+
+.v-movie {
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  margin-top: 10rpx;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.t-movie {
+  font-weight: bold;
+  flex: 1;
+}
+
+.v-movie-right {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.t-movie-right {
+  color: #969c9c;
+  font-size: 27rpx;
+  margin-right: 5rpx;
+}
+
+.scroll-moviet {
+  display: flex;
+  white-space: nowrap;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+  margin-left: 25rpx;
+}
+
+/* 隐藏scrollbar */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.v-movie-list {
+  width: 155rpx;
+  margin-right: 25rpx;
+  display: inline-block;
+}
+
+.v-movie-list-v {
+  width: 155rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.t-movie-name {
+  width: 155rpx;
+  font-size: 27rpx;
+  margin-top: 10rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.v-grade {
+  display: flex;
+  flex-direction: row;
+}
+
+.view-star {
+  flex-direction: row;
+}
+
+.star-img {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.t-grade {
+  color: #9c9c9c;
+  margin-left: 5rpx;
+  margin-top: 4rpx;
+  font-size: 23rpx;
+}
+
+.v-photos {
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  margin-top: 35rpx;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.v-photo-list {
+  margin-right: 10rpx;
+  display: inline-block;
+}
+
+.img-photo {
+  height: 330rpx;
+}

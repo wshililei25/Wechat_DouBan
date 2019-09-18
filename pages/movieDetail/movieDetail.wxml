@@ -102,12 +102,14 @@
 
   <view class="v-playactor">
     <text class="t-playactor">演职员</text>
-    <image class="grade-img" src="/images/right.png"></image>
-    <text class="t-playactor-num">全部{{movieDetail.casts.length}}</text>
+    <view class="v-playactor-right">
+      <text class="t-playactor-num">全部{{movieDetail.casts.length}}</text>
+      <image class="grade-img" src="/images/right.png"></image>
+    </view>
   </view>
 
   <view class="v-playactor-list-v">
-    <view class="v-playactor-list" wx:for="{{movieDetail.casts}}">
+    <view class="v-playactor-list" wx:for="{{movieDetail.casts}}" bindtap="itemTapPlayactor" data-index="{{index}}">
       <image class="img-playactor-list" src="{{item.avatars.small}}"></image>
       <text class="t-playactor-list">{{item.name}}</text>
     </view>
@@ -115,8 +117,10 @@
 
   <view class="v-playactor">
     <text class="t-playactor">预告片</text>
-    <image class="grade-img" src="/images/right.png"></image>
-    <text class="t-playactor-num">全部{{movieDetail.trailer_urls.length}}</text>
+    <view class="v-playactor-right">
+      <text class="t-playactor-num">全部{{movieDetail.trailer_urls.length}}</text>
+      <image class="grade-img" src="/images/right.png"></image>
+    </view>
   </view>
   <scroll-view scroll-x class="v-video">
     <view class="v-video-list" wx:for="{{movieDetail.trailers}}">
@@ -125,9 +129,13 @@
   </scroll-view>
 
   <view class="v-appraise">
-    <text class="t-playactor">短评</text>
-    <image class="grade-img" src="/images/right.png"></image>
-    <text class="t-playactor-num">全部{{movieDetail.popular_comments.length}}</text>
+    <view class="v-appraise-top">
+      <text class="t-playactor">短评</text>
+      <view class="v-playactor-right">
+        <text class="t-playactor-num">全部{{movieDetail.popular_comments.length}}</text>
+        <image class="grade-img" src="/images/right.png"></image>
+      </view>
+    </view>
     <view class="v-appraise-list" wx:for="{{movieDetail.popular_comments}}">
       <view class="v-appraise-user">
         <image class="img-appraise-user" src="{{item.author.avatar}}"></image>

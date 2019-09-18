@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/movieDetail/movieDetail",
     "pages/images/images",
+    "pages/playactorDetail/playactorDetail",
     "pages/logs/logs"
   ],
   "window": {

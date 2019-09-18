@@ -81,6 +81,16 @@ Page({
     })
   },
 
+  /**
+   * 演员详情
+   */
+  itemTapPlayactor(res) {
+    console.log(res)
+    var index = res.currentTarget.dataset.index;
+    wx.navigateTo({
+      url: '/pages/playactorDetail/playactorDetail?playactorId=' + this.data.movieDetail.casts[index].id,
+    })
+  },
 
 
   /**

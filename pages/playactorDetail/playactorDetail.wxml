@@ -1,0 +1,83 @@
+<!--pages/playactorDetail/playactorDetail.wxml-->
+<view>
+  <view class="v-head">
+    <image class="uimg-user" src="{{playactorDetail.avatars.small}}"></image>
+    <view class="v-head-right">
+      <text class="t-name">{{playactorDetail.name}}</text>
+      <text class="t-name-en">{{playactorDetail.name_en}}</text>
+      <text class="t-follow-num">520人关注</text>
+      <view class="v-follow">
+        <text class="t-follow">关注</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="v-introduction-title">简介</view>
+  <view class="v-introduction">
+    <text class="t-introduction">{{playactorDetail.summary}}</text>
+    <image class="img-introduction" src="/images/right_black.png"></image>
+  </view>
+
+  <view class="v-movie">
+    <text class="t-movie">影视</text>
+    <view class="v-movie-right">
+      <text class="t-movie-right">全部影视{{playactorDetail.works.length}}</text>
+      <image class="img-introduction" src="/images/right_black.png"></image>
+    </view>
+  </view>
+  <scroll-view scroll-x class="scroll-moviet">
+    <view class="v-movie-list" wx:for="{{playactorDetail.works}}" bindtap="itemMovieTap" data-index="{{index}}">
+      <view class="v-movie-list-v">
+        <image class="uimg-user" src="{{item.subject.images.small}}"></image>
+        <text class="t-movie-name">{{item.subject.title}}</text>
+        <view class="v-grade">
+          <view class="view-star">
+            <block wx:for="{{[2,4,6,8,10]}}" wx:for-item="item1">
+              <image class="star-img" wx:if="{{item1 > item.subject.rating.average+1}}" src="/images/star2.png"></image>
+              <image class="star-img" wx:elif="{{item1 === item.subject.rating.average+1}}" src="/images/star_b.png"></image>
+              <image class="star-img" wx:else="{{item1 <= item.subject.rating.average}}" src="/images/star_s.png"></image>
+            </block>
+          </view>
+          <text class="t-grade">{{item.subject.rating.average}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="v-photos">
+    <text class="t-movie">相册</text>
+    <view class="v-movie-right">
+      <text class="t-movie-right">全部照片{{playactorDetail.photos.length}}</text>
+      <image class="img-introduction" src="/images/right_black.png"></image>
+    </view>
+  </view>
+  <scroll-view scroll-x class="scroll-moviet">
+    <view class="v-photo-list" wx:for="{{playactorDetail.photos}}">
+      <image class="img-photo" src="{{item.thumb}}" bindload="imageLoad" data-index="{{ index }}" style="width:{{ photos[index].width }}rpx;"></image>
+    </view>
+  </scroll-view>
+
+  <view class="v-photos">
+    <text class="t-movie">相关人物</text>
+  </view>
+  <scroll-view scroll-x class="scroll-moviet">
+    <view class="v-movie-list" wx:for="{{relevantFiguresPhotos}}">
+      <view class="v-movie-list-v">
+        <image class="uimg-user" src="{{item.avatars.small}}"></image>
+        <text class="t-movie-name">{{item.name}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- <view class="v-movie-list" wx:for="{{playactorDetail.works}}" wx:key="index">
+    <scroll-view scroll-x class="scroll-moviet">
+      <view class="v-movie-list" wx:for="{{item.subject.casts}}" wx:for-item="cell" wx:key="index">
+        <view class="v-movie-list-v">
+          <image class="uimg-user" src="{{cell.avatars.small}}"></image>
+          <text class="t-movie-name">{{cell.name}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view> -->
+
+</view>

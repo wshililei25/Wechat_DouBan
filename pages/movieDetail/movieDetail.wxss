@@ -271,16 +271,27 @@ page {
 
 .v-playactor {
   margin-top: 30rpx;
-}
-
-.t-playactor-num {
-  color: #887878;
-  font-size: 22rpx;
-  float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .t-playactor {
   color: #fff;
+  flex: 1;
+}
+
+.v-playactor-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.t-playactor-num {
+  color: #887878;
+  font-size: 25rpx;
 }
 
 .v-playactor-list-v {
@@ -336,10 +347,17 @@ page {
 }
 
 .v-appraise {
-  padding: 15rpx;
+  padding: 20rpx;
   border-radius: 10rpx;
   background-color: #3d2e29;
   margin-top: 30rpx;
+}
+
+.v-appraise-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .v-appraise-list {
@@ -402,6 +420,7 @@ page {
 .v-appraiseAll {
   margin-top: 15rpx;
 }
+
 .t-appraiseAll {
   color: #fff;
   font-size: 25rpx;
