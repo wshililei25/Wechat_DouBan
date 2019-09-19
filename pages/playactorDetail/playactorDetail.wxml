@@ -61,23 +61,12 @@
     <text class="t-movie">相关人物</text>
   </view>
   <scroll-view scroll-x class="scroll-moviet">
-    <view class="v-movie-list" wx:for="{{relevantFiguresPhotos}}">
+    <view class="v-movie-list" wx:for="{{relevantFiguresPhotos}}" bindtap="itemTapPlayactor" data-index="{{index}}">
       <view class="v-movie-list-v">
         <image class="uimg-user" src="{{item.avatars.small}}"></image>
         <text class="t-movie-name">{{item.name}}</text>
       </view>
     </view>
   </scroll-view>
-
-  <!-- <view class="v-movie-list" wx:for="{{playactorDetail.works}}" wx:key="index">
-    <scroll-view scroll-x class="scroll-moviet">
-      <view class="v-movie-list" wx:for="{{item.subject.casts}}" wx:for-item="cell" wx:key="index">
-        <view class="v-movie-list-v">
-          <image class="uimg-user" src="{{cell.avatars.small}}"></image>
-          <text class="t-movie-name">{{cell.name}}</text>
-        </view>
-      </view>
-    </scroll-view>
-  </view> -->
 
 </view>

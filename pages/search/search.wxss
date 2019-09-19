@@ -1,0 +1,78 @@
+/* pages/search/search.wxss */
+
+page {
+  height: 100%;
+  background-color: white;
+}
+
+.content {
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+}
+
+.v-search {
+  height: 65rpx;
+  background-color: #f5f5f5;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-search {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.t-search {
+  font-size: 25rpx;
+  color: #9c9c9c;
+  margin-left: 10rpx;
+}
+
+.v-thisWeek {
+  width: 100%;
+  height: 320rpx;
+  border-radius: 10rpx;
+  position: relative;
+  margin-top: 20rpx;
+}
+
+.img-thisWeek {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.7;
+  border-radius: 10rpx;
+}
+
+.v-thisWeekContent {
+  position: absolute;
+  padding: 25rpx;
+}
+
+.t-thisWeek {
+  font-size: 40rpx;
+  color: white;
+  font-weight: bold;
+}
+
+.v-img {
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.img-moive {
+  width: 120rpx;
+  height: 170rpx;
+  border-radius: 10rpx;
+}
+
+.t-thisWeekNum {
+  margin-left: 20rpx;
+  font-size: 50rpx;
+  color: #b4b5ad;
+}

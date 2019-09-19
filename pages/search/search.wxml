@@ -1,0 +1,63 @@
+<!--pages/search/search.wxml-->
+<view class="content">
+  <view class="v-search">
+    <image class="img-search" src="/images/search.png"></image>
+    <text class="t-search">电影/电视剧/影人</text>
+  </view>
+
+  <view class="v-thisWeek">
+    <image class="img-thisWeek" src="{{thisWeekList.subjects[0].subject.images.small}}" mode="aspectFill"></image>
+    <view class="v-thisWeekContent">
+      <text class="t-thisWeek">一周口碑电影榜</text>
+      <view class="v-img">
+        <image class="img-moive" src="{{thisWeekList.subjects[0].subject.images.small}}"></image>
+        <image class="img-moive" src="{{thisWeekList.subjects[1].subject.images.small}}"></image>
+        <image class="img-moive" src="{{thisWeekList.subjects[2].subject.images.small}}"></image>
+        <text class="t-thisWeekNum">+{{thisWeekList.subjects.length}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="v-thisWeek">
+    <image class="img-thisWeek" src="{{beiMeiList.subjects[0].subject.images.small}}" mode="aspectFill"></image>
+    <view class="v-thisWeekContent">
+      <text class="t-thisWeek">北美电影榜</text>
+      <view class="v-img">
+        <image class="img-moive" src="{{beiMeiList.subjects[0].subject.images.small}}"></image>
+        <image class="img-moive" src="{{beiMeiList.subjects[1].subject.images.small}}"></image>
+        <image class="img-moive" src="{{beiMeiList.subjects[2].subject.images.small}}"></image>
+        <text class="t-thisWeekNum">+{{beiMeiList.subjects.length}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="v-thisWeek">
+    <image class="img-thisWeek" src="{{topList.subjects[0].images.small}}" mode="aspectFill"></image>
+    <view class="v-thisWeekContent">
+      <text class="t-thisWeek">Top250电影榜</text>
+      <view class="v-img">
+        <image class="img-moive" src="{{topList.subjects[0].images.small}}"></image>
+        <image class="img-moive" src="{{topList.subjects[1].images.small}}"></image>
+        <image class="img-moive" src="{{topList.subjects[2].images.small}}"></image>
+        <text class="t-thisWeekNum">+{{topList.subjects.length}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="v-thisWeek">
+    <image class="img-thisWeek" src="{{newMovieList.subjects[0].images.small}}" mode="aspectFill"></image>
+    <view class="v-thisWeekContent">
+      <text class="t-thisWeek">新片电影榜</text>
+      <view class="v-img">
+        <image class="img-moive" src="{{newMovieList.subjects[0].images.small}}"></image>
+        <image class="img-moive" src="{{newMovieList.subjects[1].images.small}}"></image>
+        <image class="img-moive" src="{{newMovieList.subjects[2].images.small}}"></image>
+        <text class="t-thisWeekNum">+{{newMovieList.subjects.length}}</text>
+      </view>
+    </view>
+  </view>
+
+  
+
+
+</view>

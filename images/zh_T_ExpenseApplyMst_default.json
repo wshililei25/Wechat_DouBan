@@ -1,0 +1,1538 @@
+{
+	"pageLevel": 0,
+	"templateVersion": "1",
+	"documentType": 0,
+	"docBusinessType": 0,
+	"templateName": "出差费用报销单",
+	"simpleName": "出差报销单",
+	"templateID": "T_ExpenseApplyMst",
+	"templateType": "T_ExpenseApplyMst",
+	"simpleType": "EC",
+	"saveSuccessKey": "Head.Ret",
+	"saveFailKey": "Head.Msg",
+	"saveRequestType": 0,
+	"saveUrl": "api/Expense/UploadBizInfo",
+	"submitUrl": "api/Expense/UploadBizInfo",
+	"elements": [
+		{
+			"elementType": 0,
+			"readOnly": true,
+			"lable": "单据号",
+			"lableEn": "",
+			"placeHolder": "",
+			"placeHolderEn": "",
+			"groupID": "BillGroup0",
+			"groupName": "",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 0,
+			"key": "ExpenseApplyCD",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		},
+		{
+			"elementType": 14,
+			"readOnly": true,
+			"lable": "关联出差申请单",
+			"lableEn": "",
+			"placeHolder": "",
+			"placeHolderEn": "",
+			"groupID": "BillGroup1",
+			"groupName": "出差申请单",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [
+				{
+					"elementType": 14,
+					"readOnly": true,
+					"lable": "关联出差申请单",
+					"lableEn": "",
+					"placeHolder": "请选择",
+					"placeHolderEn": "",
+					"groupID": "BillGroup1",
+					"groupName": "出差申请单",
+					"groupNameEn": "",
+					"format": {},
+					"childElement": [],
+					"orderBy": 1,
+					"key": "expenseApply1",
+					"dataPrecision": "0",
+					"roundType": 0,
+					"maxLength": 20
+				}
+			],
+			"orderBy": 1,
+			"key": "expenseApply",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		},
+		{
+			"elementType": 5,
+			"readOnly": true,
+			"lable": "申请部门",
+			"lableEn": "",
+			"placeHolder": "请选择",
+			"placeHolderEn": "",
+			"groupID": "BillGroup2",
+			"groupName": "申请信息",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 2,
+			"key": "costCenterName",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		},
+		{
+			"elementType": 2,
+			"readOnly": false,
+			"lable": "业务单据号",
+			"lableEn": "",
+			"placeHolder": "请输入",
+			"placeHolderEn": "",
+			"groupID": "BillGroup2",
+			"groupName": "申请信息",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 3,
+			"key": "BusinessBizCD",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		},
+		{
+			"elementType": 5,
+			"readOnly": true,
+			"lable": "账套A公司",
+			"lableEn": "",
+			"placeHolder": "请输入",
+			"placeHolderEn": "",
+			"groupID": "BillGroup2",
+			"groupName": "申请信息",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 4,
+			"key": "AccountTpye",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 100
+		},
+		{
+			"elementType": 5,
+			"readOnly": true,
+			"lable": "入账部门",
+			"lableEn": "",
+			"placeHolder": "请选择",
+			"placeHolderEn": "",
+			"groupID": "BillGroup3",
+			"groupName": "入账信息",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 3,
+			"key": "chargeCostCenter",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		},
+		{
+			"elementType": 5,
+			"readOnly": true,
+			"lable": "入账项目",
+			"lableEn": "",
+			"placeHolder": "请选择",
+			"placeHolderEn": "",
+			"groupID": "BillGroup3",
+			"groupName": "入账信息",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 4,
+			"key": "billProject",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		},
+		{
+			"elementType": 5,
+			"readOnly": true,
+			"lable": "审批方式",
+			"lableEn": "",
+			"placeHolder": "请选择",
+			"placeHolderEn": "",
+			"groupID": "BillGroup3",
+			"groupName": "入账信息",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 5,
+			"key": "approveTypeName",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		},
+		{
+			"elementType": 5,
+			"readOnly": true,
+			"lable": "业务类型",
+			"lableEn": "",
+			"placeHolder": "请选择",
+			"placeHolderEn": "",
+			"groupID": "BillGroup3",
+			"groupName": "入账信息",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 6,
+			"key": "businessType",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		},
+		{
+			"elementType": 5,
+			"readOnly": true,
+			"lable": "结算币种",
+			"lableEn": "",
+			"placeHolder": "请选择",
+			"placeHolderEn": "",
+			"groupID": "BillGroup3",
+			"groupName": "入账信息",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 7,
+			"key": "settleMethodName",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		},
+		{
+			"elementType": 5,
+			"readOnly": true,
+			"lable": "支付方式",
+			"lableEn": "",
+			"placeHolder": "请选择",
+			"placeHolderEn": "",
+			"groupID": "BillGroup3",
+			"groupName": "入账信息",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 8,
+			"key": "payMethod",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		},
+		{
+			"elementType": 7,
+			"readOnly": true,
+			"lable": "付款日期",
+			"lableEn": "",
+			"placeHolder": "请选择",
+			"placeHolderEn": "",
+			"groupID": "BillGroup3",
+			"groupName": "入账信息",
+			"groupNameEn": "",
+			"format": {
+				"expression": "yyyy-MM-dd",
+				"keys": "HopePayTime"
+			},
+			"childElement": [],
+			"orderBy": 9,
+			"key": "HopePayTime",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		},
+		{
+			"elementType": 2,
+			"readOnly": true,
+			"lable": "最终收款人",
+			"lableEn": "",
+			"placeHolder": "请输入",
+			"placeHolderEn": "",
+			"groupID": "BillGroup7",
+			"groupName": "收款人信息",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 13,
+			"key": "finalPayee",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 50
+		},
+		{
+			"elementType": 9,
+			"readOnly": true,
+			"lable": "卡号",
+			"lableEn": "",
+			"placeHolder": "请输入",
+			"placeHolderEn": "",
+			"groupID": "BillGroup7",
+			"groupName": "收款人信息",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 14,
+			"key": "bankCard",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 25
+		},
+		{
+			"elementType": 2,
+			"readOnly": true,
+			"lable": "开户银行",
+			"lableEn": "",
+			"placeHolder": "请输入",
+			"placeHolderEn": "",
+			"groupID": "BillGroup7",
+			"groupName": "收款人信息",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 15,
+			"key": "bankAddress",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 50
+		},
+		{
+			"elementType": 8,
+			"readOnly": true,
+			"lable": "事由备注",
+			"lableEn": "",
+			"placeHolder": "请输入",
+			"placeHolderEn": "",
+			"groupID": "BillGroup3",
+			"groupName": "",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 16,
+			"key": "remark",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 150
+		},
+		{
+			"elementType": 11,
+			"readOnly": true,
+			"lable": "开支流水",
+			"lableEn": "",
+			"placeHolder": "请选择",
+			"placeHolderEn": "",
+			"groupID": "BillGroup5",
+			"groupName": "开支",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [
+				{
+					"elementType": 11,
+					"readOnly": true,
+					"lable": "开支流水详情",
+					"lableEn": "",
+					"placeHolder": "请选择",
+					"placeHolderEn": "",
+					"groupID": "BillGroup5",
+					"groupName": "开支",
+					"groupNameEn": "",
+					"format": {},
+					"childElement": [],
+					"orderBy": 1,
+					"key": "ExpenseDetail",
+					"dataPrecision": "0",
+					"roundType": 0,
+					"maxLength": 100
+				}
+			],
+			"orderBy": 17,
+			"key": "expenseSpending",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		},
+		{
+			"elementType": 14,
+			"readOnly": true,
+			"lable": "核销现金预支",
+			"lableEn": "",
+			"placeHolder": "",
+			"placeHolderEn": "",
+			"groupID": "BillGroup6",
+			"groupName": "现金预支",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 18,
+			"key": "cashAdvance",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		},
+		{
+			"elementType": 13,
+			"readOnly": true,
+			"lable": "附件",
+			"lableEn": "",
+			"placeHolder": "请选择",
+			"placeHolderEn": "",
+			"groupID": "BillGroup10",
+			"groupName": "附件",
+			"groupNameEn": "",
+			"format": {},
+			"childElement": [],
+			"orderBy": 30,
+			"key": "Doc_Json",
+			"dataPrecision": "0",
+			"roundType": 0,
+			"maxLength": 20
+		}
+	],
+	"dataSources": [
+	    {
+			"sourceType": 1,
+			"sourceKey": "AccountTpye",
+			"multiSelect": false,
+			"url": "/Api/BaseData/GetMappingList",
+			"relatedID": "EmployeeID",
+			"localParams": {},
+			"modelBindType": 0,
+			"needSearch": true,
+			"requestType": 0,
+			"filterID": "EmployeeName",
+			"params": {
+				"expression": "{\"AccountTpye\":\"A\"}",
+				"paramKey": "AccountTpye"
+			},
+			"changeKeys": "LegalUnitName,costCenterName",
+			"modelBinds": [
+				{
+					"modelKey": "EmployeeName",
+					"dataSourceKey": "EmployeeName",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "EmployeeID",
+					"dataSourceKey": "EmployeeID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "CompanyGUID",
+					"dataSourceKey": "CompanyGUID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "CostCenterID",
+					"dataSourceKey": "OrgID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "OrgID",
+					"dataSourceKey": "OrgID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "OrgCD",
+					"dataSourceKey": "OrgCD",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "OrgName",
+					"dataSourceKey": "OrgName",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "costCenterName",
+					"dataSourceKey": "OrgName",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "costCenterID",
+					"dataSourceKey": "OrgID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "LegalUnitName",
+					"dataSourceKey": "CompanyName",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "LegalUnitID",
+					"dataSourceKey": "CompanyGUID",
+					"parentKey": ""
+				}
+			]
+		},
+		{
+			"sourceType": 1,
+			"sourceKey": "detailRequest",
+			"url": "/api/Expense/EditingBizInfo",
+			"requestType": 0,
+			"params": {
+				"expression": "{\"BizID\":\"%s\",\"BizType\":\"%s\"}",
+				"paramKey": "BizID,BizType"
+			}
+		},
+		{
+			"sourceType": 1,
+			"sourceKey": "expenseApply",
+			"multiSelect": false,
+			"url": "api/Travel/GetTravelCanMacth",
+			"relatedID": "DETAIL_MOBILE_ID",
+			"localParams": {},
+			"modelBindType": 1,
+			"filterID": "businessTypeID,BusinessTypeCD",
+			"changeKeys": "",
+			"returnOld": false,
+			"requestType": 0,
+			"needEditFlagKey": "expenseApply,TravelModel",
+			"params": {
+				"expression": "{\"BizType\":\"%s\",\"LegalUnitID\":\"%s\",\"BusinessTypeCD\":\"%s\",\"Page\":\"%s\",\"PageSize\":\"%s\"}",
+				"paramKey": "templateType,legalUnitID,businessTypeID,(pn),(ps)"
+			},
+			"modelBinds": [
+				{
+					"modelKey": "BILL_TYPE_NAME",
+					"dataSourceKey": "BILL_TYPE_NAME",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "BizIcon",
+					"dataSourceKey": "BizIcon",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "CreatDateStr",
+					"dataSourceKey": "CreatDateStr",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "ExpenseClaimReason",
+					"dataSourceKey": "ExpenseClaimReason",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "DETAIL_MOBILE_ID",
+					"dataSourceKey": "DETAIL_MOBILE_ID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "BizCD",
+					"dataSourceKey": "BizCD",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "DepartureTime",
+					"dataSourceKey": "DepartureTime",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "ArrivalTime",
+					"dataSourceKey": "ArrivalTime",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "BusinessTypeName",
+					"dataSourceKey": "BusinessTypeName",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "BusinessTypeCD",
+					"dataSourceKey": "BusinessTypeCD",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "BizID",
+					"dataSourceKey": "BizID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "departureTime",
+					"dataSourceKey": "DepartureTime",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "arrivalTime",
+					"dataSourceKey": "ArrivalTime",
+					"isNeedBind": true,
+					"parentKey": ""
+				},
+				{
+					"modelKey": "Title",
+					"dataSourceKey": "Title",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "Desc1",
+					"dataSourceKey": "Desc1",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "Desc2",
+					"dataSourceKey": "Desc2",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "detailMobileID",
+					"dataSourceKey": "BizID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "templateID",
+					"dataSourceKey": "BILL_TYPE_NAME"
+				}
+			]
+		},
+		{
+			"sourceType": 1,
+			"sourceKey": "expenseSpending",
+			"multiSelect": true,
+			"url": "api/Bill/GetBilllsCanMacth",
+			"relatedID": "staticID",
+			"localParams": {},
+			"modelBindType": 2,
+			"requestType": 0,
+			"filterID": "businessTypeID",
+			"needEditFlagKey": "expenseSpending,ExpenseBILLList",
+			"params": {
+				"expression": "{\"BusinessTypeCD\":\"%s\",\"Page\":\"%s\",\"PageSize\":\"%s\"}",
+				"paramKey": "businessTypeID,(pn),(ps)"
+			},
+			"modelBinds": [
+				{
+					"modelKey": "ExpenseTime",
+					"dataSourceKey": "ExpenseTime",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "IconUrl",
+					"dataSourceKey": "IconUrl",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "BIZ_CATEGORY_NAME",
+					"dataSourceKey": "BIZ_CATEGORY_NAME",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "ClaimCurrency",
+					"dataSourceKey": "ClaimCurrency",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "ExpenseAmount",
+					"dataSourceKey": "ExpenseAmount",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "Remark",
+					"dataSourceKey": "Remark",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "CanShare",
+					"dataSourceKey": "CanShare",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "OVER_STANDARD",
+					"dataSourceKey": "OVER_STANDARD",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "DETAIL_MOBILE_ID",
+					"dataSourceKey": "DETAIL_MOBILE_ID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "BizID",
+					"dataSourceKey": "BizID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "DETAIL_ITEM_ID",
+					"dataSourceKey": "DETAIL_ITEM_ID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "BIZ_CATEGORY",
+					"dataSourceKey": "BIZ_CATEGORY",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "InvoiceCategory",
+					"dataSourceKey": "InvoiceCategory",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "TaxAmount",
+					"dataSourceKey": "TaxAmount",
+					"parentKey": ""
+				}
+			]
+		},
+		{
+			"sourceType": 0,
+			"sourceKey": "chargeCostCenter",
+			"multiSelect": false,
+			"url": "",
+			"relatedID": "staticID",
+			"modelBindType": 0,
+			"localParams": {
+				"androidWhere": "staticType=%s",
+				"iosWhere": "staticType=%@",
+				"localKey": ":8"
+			},
+			"params": {},
+			"modelBinds": [
+				{
+					"modelKey": "chargeCostCenter",
+					"dataSourceKey": "staticName",
+					"parentKey": "GetCities"
+				},
+				{
+					"modelKey": "chargeCostCenterID",
+					"dataSourceKey": "staticID",
+					"parentKey": "GetCities"
+				},
+				{
+					"modelKey": "chargeCostCenterCD",
+					"dataSourceKey": "staticCD",
+					"parentKey": "GetCities"
+				}
+			]
+		},
+		{
+			"sourceType": 1,
+			"sourceKey": "billProject",
+			"multiSelect": false,
+			"url": "/api/BaseData/GetProjectByChargeCostCenterID",
+			"relatedID": "staticID",
+			"modelBindType": 0,
+			"changeKeys": "",
+			"localParams": {},
+			"requestType": 0,
+			"params": {
+				"expression": "{\"LegalUnitID\":\"%s\",\"ChargeCostCenterID\":\"%s\",\"Page\":\"%s\",\"PageSize\":\"%s\"}",
+				"paramKey": "legalUnitID,chargeCostCenterID,(pn),(ps)"
+			},
+			"modelBinds": [
+				{
+					"modelKey": "billProject",
+					"dataSourceKey": "staticName",
+					"parentKey": "GetCities"
+				},
+				{
+					"modelKey": "billProjectID",
+					"dataSourceKey": "staticID",
+					"parentKey": "GetCities"
+				}
+			]
+		},
+		{
+			"sourceType": 0,
+			"sourceKey": "approveTypeName",
+			"multiSelect": false,
+			"url": "",
+			"relatedID": "staticID",
+			"modelBindType": 0,
+			"localParams": {
+				"androidWhere": "staticType=%s",
+				"iosWhere": "staticType=%@",
+				"localKey": ":17"
+			},
+			"params": {},
+			"modelBinds": [
+				{
+					"modelKey": "approveTypeName",
+					"dataSourceKey": "staticName",
+					"parentKey": "GetCities"
+				},
+				{
+					"modelKey": "approveType",
+					"dataSourceKey": "staticID",
+					"parentKey": "GetCities"
+				}
+			]
+		},
+		{
+			"sourceType": 1,
+			"sourceKey": "businessType",
+			"multiSelect": false,
+			"url": "/api/BaseData/GetBusineesTypeByChargeCostCenterID",
+			"relatedID": "staticID",
+			"modelBindType": 0,
+			"changeKeys": "",
+			"localParams": {},
+			"requestType": 0,
+			"params": {
+				"expression": "{\"LegalUnitID\":\"%s\",\"ChargeCostCenterID\":\"%s\",\"BizType\":\"%s\",\"Page\":\"%s\",\"PageSize\":\"%s\"}",
+				"paramKey": "legalUnitID,chargeCostCenterID,templateType,(pn),(ps)"
+			},
+			"modelBinds": [
+				{
+					"modelKey": "businessType",
+					"dataSourceKey": "staticName",
+					"parentKey": "GetCities"
+				},
+				{
+					"modelKey": "businessTypeID",
+					"dataSourceKey": "staticID",
+					"parentKey": "GetCities"
+				}
+			]
+		},
+		{
+			"sourceType": 0,
+			"sourceKey": "payMethod",
+			"multiSelect": false,
+			"url": "",
+			"relatedID": "staticID",
+			"modelBindType": 0,
+			"changeKeys": "bankCard,bankAddress",
+			"localParams": {
+				"androidWhere": "staticType=%s",
+				"iosWhere": "staticType=%@",
+				"localKey": ":19"
+			},
+			"params": {},
+			"modelBinds": [
+				{
+					"modelKey": "payMethod",
+					"dataSourceKey": "staticName",
+					"parentKey": "GetCities"
+				},
+				{
+					"modelKey": "payMethodID",
+					"dataSourceKey": "staticID",
+					"parentKey": "GetCities"
+				}
+			]
+		},
+		{
+			"sourceType": 0,
+			"sourceKey": "settleMethodName",
+			"multiSelect": false,
+			"url": "",
+			"relatedID": "staticID",
+			"modelBindType": 0,
+			"localParams": {
+				"androidWhere": "staticType=%s",
+				"iosWhere": "staticType=%@",
+				"localKey": ":20"
+			},
+			"params": {},
+			"modelBinds": [
+				{
+					"modelKey": "settleMethodName",
+					"dataSourceKey": "staticName",
+					"parentKey": "GetCities"
+				},
+				{
+					"modelKey": "settleMethod",
+					"dataSourceKey": "staticID",
+					"parentKey": "GetCities"
+				}
+			]
+		},
+		{
+			"sourceType": 1,
+			"sourceKey": "costCenterName",
+			"multiSelect": false,
+			"url": "/api/Account/GetOrgListByEntity",
+			"relatedID": "OrgGUID",
+			"modelBindType": 0,
+			"localParams": {},
+			"requestType": 0,
+			"params": {
+				"expression": "{\"LegalUnitID\":\"%s\",\"OrgType\":\"1\",\"Page\":\"%s\",\"PageSize\":\"%s\"}",
+				"paramKey": "legalUnitID,(pn),(ps)"
+			},
+			"modelBinds": [
+				{
+					"modelKey": "costCenterName",
+					"dataSourceKey": "FullPathName",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "costCenterID",
+					"dataSourceKey": "OrgGUID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "CostCenterCD",
+					"dataSourceKey": "OrgCD"
+				}
+			]
+		},
+		{
+			"sourceType": 1,
+			"sourceKey": "cashAdvance",
+			"multiSelect": true,
+			"url": "api/Expense/DownloadPrecashListPage",
+			"relatedID": "DETAIL_MOBILE_ID",
+			"localParams": {},
+			"modelBindType": 2,
+			"filterID": "businessTypeID,BusinessTypeCD",
+			"requestType": 0,
+			"returnOld": false,
+			"needEditFlagKey": "cashAdvance,ExpenseCashList",
+			"params": {
+				"expression": "{\"BizType\":\"%s\",\"BusinessTypeCD\":\"%s\",\"Page\":\"%s\",\"PageSize\":\"%s\",\"ExpenseApplyID\":\"%s\"}",
+				"paramKey": "templateType,businessTypeID,(pn),(ps),ExpenseApplyID"
+			},
+			"modelBinds": [
+				{
+					"modelKey": "BILL_TYPE_NAME",
+					"dataSourceKey": "BILL_TYPE_NAME",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "BizIcon",
+					"dataSourceKey": "BizIcon",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "CreatDateStr",
+					"dataSourceKey": "CreatDateStr",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "ExpenseClaimReason",
+					"dataSourceKey": "ExpenseClaimReason",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "DETAIL_MOBILE_ID",
+					"dataSourceKey": "DETAIL_MOBILE_ID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "BizCD",
+					"dataSourceKey": "BizCD",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "BizID",
+					"dataSourceKey": "BizID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "Title",
+					"dataSourceKey": "Title",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "Desc1",
+					"dataSourceKey": "Desc1",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "Desc2",
+					"dataSourceKey": "Desc2",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "detailMobileID",
+					"dataSourceKey": "BizID",
+					"parentKey": ""
+				},
+				{
+					"modelKey": "templateID",
+					"dataSourceKey": "BILL_TYPE_NAME"
+				},
+				{
+					"modelKey": "BusinessTypeCD",
+					"dataSourceKey": "BusinessTypeCD"
+				}
+			]
+		}
+	],
+	"expression": [
+		{
+			"key": "employee.count",
+			"operateType": 1,
+			"orderBy": 0,
+			"valueType": 0,
+			"value": [
+				{
+					"key": "employee.num",
+					"operateType": 2,
+					"orderBy": 0,
+					"valueType": 0,
+					"value": [],
+					"dateType": 1
+				},
+				{
+					"key": "employee.count",
+					"operateType": 0,
+					"orderBy": 1,
+					"valueType": 0,
+					"value": [],
+					"dateType": 1
+				}
+			]
+		}
+	],
+	"validateExpression": [
+		{
+			"validateKey": "B",
+			"operateType": 5,
+			"message": "申请部门不可为空！",
+			"messageEn": "should input reasons",
+			"valueType": 1,
+			"validates": [
+				{
+					"key": "costCenterName",
+					"operateType": 12,
+					"orderBy": 0,
+					"valueType": 3,
+					"value": []
+				}
+			]
+		},
+		{
+			"validateKey": "C",
+			"operateType": 5,
+			"message": "项目审批状态下，入账项目不可为空！",
+			"messageEn": "should input reasons",
+			"valueType": 1,
+			"validates": [
+				{
+					"key": "approveType",
+					"operateType": 10,
+					"orderBy": 0,
+					"valueType": 4,
+					"compareValue": "",
+					"value": [
+						{
+							"key": "approveType",
+							"operateType": 5,
+							"orderBy": 0,
+							"valueType": 0,
+							"compareValue": "0",
+							"value": []
+						}
+					]
+				},
+				{
+					"key": "billProject",
+					"operateType": 10,
+					"orderBy": 2,
+					"valueType": 4,
+					"compareValue": "",
+					"value": [
+						{
+							"key": "billProject",
+							"operateType": 12,
+							"orderBy": 0,
+							"valueType": 3,
+							"compareValue": "",
+							"value": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"validateKey": "B",
+			"operateType": 5,
+			"message": "业务类型不可为空！",
+			"messageEn": "should input reasons",
+			"valueType": 1,
+			"validates": [
+				{
+					"key": "businessType",
+					"operateType": 12,
+					"orderBy": 0,
+					"valueType": 3,
+					"value": []
+				}
+			]
+		},
+		{
+			"validateKey": "B",
+			"operateType": 5,
+			"message": "事由备注不可为空！",
+			"messageEn": "should input reasons",
+			"valueType": 1,
+			"validates": [
+				{
+					"key": "remark",
+					"operateType": 12,
+					"orderBy": 0,
+					"valueType": 3,
+					"value": []
+				}
+			]
+		},
+		{
+			"validateKey": "B",
+			"operateType": 5,
+			"message": "最终收款人不可为空！",
+			"messageEn": "should input reasons",
+			"valueType": 1,
+			"validates": [
+				{
+					"key": "finalPayee",
+					"operateType": 12,
+					"orderBy": 0,
+					"valueType": 3,
+					"value": []
+				}
+			]
+		},
+		{
+			"validateKey": "B",
+			"operateType": 5,
+			"message": "开支流水未选择！",
+			"messageEn": "should input reasons",
+			"valueType": 1,
+			"validates": [
+				{
+					"key": "expenseSpending",
+					"operateType": 12,
+					"orderBy": 0,
+					"valueType": 5,
+					"value": []
+				}
+			]
+		},
+		{
+			"validateKey": "C",
+			"operateType": 5,
+			"message": "开户银行不可为空！",
+			"messageEn": "should input reasons",
+			"valueType": 1,
+			"validates": [
+				{
+					"key": "payMethodID",
+					"operateType": 10,
+					"orderBy": 0,
+					"valueType": 4,
+					"compareValue": "",
+					"value": [
+						{
+							"key": "payMethodID",
+							"operateType": 11,
+							"orderBy": 0,
+							"valueType": 3,
+							"compareValue": "PT03",
+							"value": []
+						}
+					]
+				},
+				{
+					"key": "bankAddress",
+					"operateType": 11,
+					"orderBy": 2,
+					"valueType": 4,
+					"compareValue": "",
+					"value": [
+						{
+							"key": "bankAddress",
+							"operateType": 12,
+							"orderBy": 0,
+							"valueType": 3,
+							"compareValue": "",
+							"value": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"validateKey": "C",
+			"operateType": 5,
+			"message": "银行卡号不可为空！",
+			"messageEn": "should input reasons",
+			"valueType": 1,
+			"validates": [
+				{
+					"key": "payMethodID",
+					"operateType": 10,
+					"orderBy": 0,
+					"valueType": 4,
+					"compareValue": "",
+					"value": [
+						{
+							"key": "payMethodID",
+							"operateType": 11,
+							"orderBy": 0,
+							"valueType": 3,
+							"compareValue": "PT03",
+							"value": []
+						}
+					]
+				},
+				{
+					"key": "bankCard",
+					"operateType": 11,
+					"orderBy": 2,
+					"valueType": 4,
+					"compareValue": "",
+					"value": [
+						{
+							"key": "bankCard",
+							"operateType": 12,
+							"orderBy": 0,
+							"valueType": 3,
+							"compareValue": "",
+							"value": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"legalUnitID": "000007",
+	"softControlKey": [
+		{
+			"softControlKey": "cashAdvance",
+			"operateType": 5,
+			"message": "请先选择业务类型",
+			"messageEn": "Please choose businesstype firstly",
+			"valueType": 1,
+			"validates": [
+				{
+					"key": "businessType",
+					"operateType": 12,
+					"orderBy": 0,
+					"valueType": 3,
+					"value": []
+				}
+			]
+		},
+		{
+			"softControlKey": "expenseSpending",
+			"operateType": 5,
+			"message": "请先选择业务类型",
+			"messageEn": "Please choose businesstype firstly",
+			"valueType": 1,
+			"validates": [
+				{
+					"key": "businessType",
+					"operateType": 12,
+					"orderBy": 0,
+					"valueType": 3,
+					"value": []
+				}
+			]
+		},
+		{
+			"softControlKey": "expenseApply",
+			"operateType": 5,
+			"message": "请先选择业务类型",
+			"messageEn": "Please choose businesstype firstly",
+			"valueType": 1,
+			"validates": [
+				{
+					"key": "businessType",
+					"operateType": 12,
+					"orderBy": 0,
+					"valueType": 3,
+					"value": []
+				}
+			]
+		},
+		{
+			"softControlKey": "billProject",
+			"operateType": 5,
+			"message": "请先选择入账部门",
+			"messageEn": "Please choose businesstype firstly",
+			"valueType": 1,
+			"validates": [
+				{
+					"key": "chargeCostCenter",
+					"operateType": 12,
+					"orderBy": 0,
+					"valueType": 3,
+					"value": []
+				}
+			]
+		},
+		{
+			"softControlKey": "businessType",
+			"operateType": 5,
+			"message": "请先选择入账部门",
+			"messageEn": "Please choose businesstype firstly",
+			"valueType": 1,
+			"validates": [
+				{
+					"key": "chargeCostCenter",
+					"operateType": 12,
+					"orderBy": 0,
+					"valueType": 3,
+					"value": []
+				}
+			]
+		}
+	],
+	"visibleKeys": [
+		{
+			"key": "BillGroup0",
+			"operateType": 1,
+			"orderBy": 0,
+			"valueType": 1,
+			"value": [
+				{
+					"key": "ExpenseApplyCD",
+					"operateType": 12,
+					"orderBy": 0,
+					"valueType": 3,
+					"compareValue": "",
+					"value": []
+				}
+			]
+		},
+		{
+			"key": "bankCard",
+			"operateType": 1,
+			"orderBy": 0,
+			"valueType": 3,
+			"value": [
+				{
+					"key": "payMethodID",
+					"operateType": 5,
+					"orderBy": 0,
+					"valueType": 3,
+					"compareValue": "PT03",
+					"value": []
+				}
+			]
+		},
+		{
+			"key": "bankAddress",
+			"operateType": 1,
+			"orderBy": 0,
+			"valueType": 3,
+			"value": [
+				{
+					"key": "payMethodID",
+					"operateType": 5,
+					"orderBy": 0,
+					"valueType": 3,
+					"compareValue": "PT03",
+					"value": []
+				}
+			]
+		},
+		{
+			"key": "ExpenseApplyCD",
+			"operateType": 12,
+			"orderBy": 1,
+			"valueType": 4,
+			"compareValue": "",
+			"value": [
+				{
+					"key": "ExpenseApplyCD",
+					"operateType": 12,
+					"orderBy": 0,
+					"valueType": 3,
+					"compareValue": "",
+					"value": []
+				}
+			]
+		}
+	],
+	"enableKeys": [],
+	"clearKeys": [
+		{
+			"key": "chargeCostCenter",
+			"affectKeys": "businessType,expenseApply,expenseSpending,cashAdvance,businessTypeID",
+			"clearCompareKey": "chargeCostCenterID,staticID",
+			"message": "修改入账部门，会清空业务类型、申请单、开支流水和现金预支单，是否确定修改？",
+			"messageEn": "Replacing the travel application form will clear the expense flow"
+		},
+		{
+			"key": "businessType",
+			"affectKeys": "expenseApply,expenseSpending,cashAdvance",
+			"clearCompareKey": "businessTypeID,staticID",
+			"message": "修改业务类型会清空申请单、开支流水和现金预支单，是否确定修改？",
+			"messageEn": "Replacing the travel application form will clear the expense flow"
+		}
+	],
+	"transEntities": [
+		{
+			"modelKey": "EditFlag",
+			"remoteKey": "ActionType",
+			"isOutsideKey": true
+		},
+		{
+			"modelKey": "templateType",
+			"remoteKey": "BizType",
+			"isOutsideKey": true
+		},
+		{
+			"modelKey": "root",
+			"remoteKey": "Bizdata",
+			"isOutsideKey": true
+		},
+		{
+			"modelKey": "applyStatus",
+			"remoteKey": "ApplyStatus"
+		},
+		{
+			"modelKey": "approveType",
+			"remoteKey": "ApproveType"
+		},
+		{
+			"modelKey": "approveTypeName",
+			"remoteKey": "ApproveTypeName"
+		},
+		{
+			"modelKey": "bankAddress",
+			"remoteKey": "Bank"
+		},
+		{
+			"modelKey": "bankCard",
+			"remoteKey": "BankCard"
+		},
+		{
+			"modelKey": "finalPayee",
+			"remoteKey": "BankUser"
+		},
+		{
+			"modelKey": "BIZ_ID",
+			"remoteKey": "BizID"
+		},
+		{
+			"modelKey": "businessTypeID",
+			"remoteKey": "BusinessTypeCD"
+		},
+		{
+			"modelKey": "businessType",
+			"remoteKey": "BusinessTypeName"
+		},
+		{
+			"modelKey": "chargeCostCenter",
+			"remoteKey": "ChargeCostCenter"
+		},
+		{
+			"modelKey": "chargeCostCenterID",
+			"remoteKey": "ChargeCostCenterID"
+		},
+		{
+			"modelKey": "costCenterID",
+			"remoteKey": "CostCenterID"
+		},
+		{
+			"modelKey": "costCenterName",
+			"remoteKey": "CostCenterName"
+		},
+		{
+			"modelKey": "detailMobileID",
+			"remoteKey": "DETAIL_MOBILE_ID"
+		},
+		{
+			"modelKey": "remark",
+			"remoteKey": "ExpenseClaimReason"
+		},
+		{
+			"modelKey": "needCashAdvance",
+			"remoteKey": "IsNeedPreCashApply"
+		},
+		{
+			"modelKey": "legalUnitID",
+			"remoteKey": "LegalUnitID"
+		},
+		{
+			"modelKey": "legalUnitName",
+			"remoteKey": "LegalUnitName"
+		},
+		{
+			"modelKey": "payMethod",
+			"remoteKey": "PaymentMethod"
+		},
+		{
+			"modelKey": "payMethodID",
+			"remoteKey": "PaymentMethodID"
+		},
+		{
+			"modelKey": "billProject",
+			"remoteKey": "Project"
+		},
+		{
+			"modelKey": "billProjectID",
+			"remoteKey": "ProjectID"
+		},
+		{
+			"modelKey": "settleMethodName",
+			"remoteKey": "SettleMethodName"
+		},
+		{
+			"modelKey": "settleMethod",
+			"remoteKey": "SettleMethod"
+		},
+		{
+			"modelKey": "TravelApplyCD",
+			"remoteKey": "TravelApplyCD"
+		},
+		{
+			"modelKey": "TravelApplyID",
+			"remoteKey": "TravelApplyID"
+		},
+		{
+			"modelKey": "expenseApply",
+			"remoteKey": "{TravelModel}"
+		},
+		{
+			"modelKey": "expenseApply",
+			"remoteKey": "Travel_DETAIL_MOBILE_ID"
+		},
+		{
+			"modelKey": "cashAdvance",
+			"remoteKey": "[ExpenseCashList]"
+		},
+		{
+			"modelKey": "expenseSpending",
+			"remoteKey": "[ExpenseBILLList]"
+		},
+		{
+			"modelKey": "expenseShare",
+			"remoteKey": "[BillShareList]"
+		},
+		{
+			"modelKey": "departureTime",
+			"remoteKey": "DepartureTime"
+		},
+		{
+			"modelKey": "arrivalTime",
+			"remoteKey": "ArrivalTime"
+		},
+		{
+			"modelKey": "ExpenseApplyCD",
+			"remoteKey": "ExpenseApplyCD"
+		},
+		{
+			"modelKey": "expenseApply.detailMobileID",
+			"remoteKey": "expenseApply.BizID"
+		},
+		{
+			"modelKey": "expenseApply.templateID",
+			"remoteKey": "expenseApply.BizType"
+		},
+		{
+			"modelKey": "cashAdvance.detailMobileID",
+			"remoteKey": "cashAdvance.BizID"
+		},
+		{
+			"modelKey": "cashAdvance.templateID",
+			"remoteKey": "cashAdvance.BizType"
+		},
+		{
+			"modelKey": "ExpenseApplyID",
+			"remoteKey": "ExpenseApplyID"
+		}
+	]
+}

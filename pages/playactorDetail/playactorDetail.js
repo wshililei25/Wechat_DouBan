@@ -7,8 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    photos: {},
-    relevantFiguresPhotos: {},
+    photos: {}, //相册
+    relevantFiguresPhotos: [], //相关人物
     playactorDetail: null,
   },
 
@@ -41,16 +41,19 @@ Page({
         wx.setNavigationBarTitle({
           title: res.data.name,
         });
+
+        var peoples = [];
+        for (var i in res.data.works) {
+          for (var index in res.data.works[i].subject.casts) {
+            if (options.playactorId != res.data.works[i].subject.casts[index].id) {
+              peoples.push(res.data.works[i].subject.casts[index])
+            }
+          };
+        };
         that.setData({
           playactorDetail: res.data,
+          relevantFiguresPhotos: peoples
         });
-        // var aa;
-        // for (var i in res.works) {
-        //   aa: res.works[i].subject.casts
-        // };
-        that.setData({
-          relevantFiguresPhotos: res.data.works[0].subject.casts
-        })
         console.log(that.data.relevantFiguresPhotos);
         wx.hideToast()
       }
@@ -65,6 +68,17 @@ Page({
     var index = res.currentTarget.dataset.index;
     wx.navigateTo({
       url: '/pages/movieDetail/movieDetail?movieId=' + this.data.playactorDetail.works[index].subject.id,
+    })
+  },
+
+  /**
+   * 相关人物详情
+   */
+  itemTapPlayactor(res) {
+    console.log(res)
+    var index = res.currentTarget.dataset.index;
+    wx.navigateTo({
+      url: '/pages/playactorDetail/playactorDetail?playactorId=' + this.data.relevantFiguresPhotos[index].id,
     })
   },
 

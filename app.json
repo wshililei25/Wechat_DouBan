@@ -4,14 +4,14 @@
     "pages/movieDetail/movieDetail",
     "pages/images/images",
     "pages/playactorDetail/playactorDetail",
+    "pages/search/search",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "逗辦"
+    "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
@@ -23,7 +23,7 @@
         "selectedIconPath": "images/dianying_s.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/search/search",
         "text": "查询",
         "iconPath": "images/chaxun.png",
         "selectedIconPath": "images/chaxun_s.png"
