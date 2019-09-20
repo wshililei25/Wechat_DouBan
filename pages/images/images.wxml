@@ -1,7 +1,11 @@
 <!--pages/images/images.wxml-->
 <view class="content">
+  <view class="v-num">
+    <text class="t-num">{{num}}</text>
+    <text class="t-totalNum">/{{photos.length}}</text>
+  </view>
 
-  <swiper>
+  <swiper bindchange="bindchangeSwiper" data-index="{{index}}">
     <block wx:for="{{photos}}">
       <swiper-item class="swiper-item">
         <image src="{{item.thumb}}" mode="widthFix" />

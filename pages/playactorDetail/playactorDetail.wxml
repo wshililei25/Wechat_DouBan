@@ -46,7 +46,7 @@
 
   <view class="v-photos">
     <text class="t-movie">相册</text>
-    <view class="v-movie-right">
+    <view class="v-movie-right" bindtap="allPhotoTap">
       <text class="t-movie-right">全部照片{{playactorDetail.photos.length}}</text>
       <image class="img-introduction" src="/images/right_black.png"></image>
     </view>

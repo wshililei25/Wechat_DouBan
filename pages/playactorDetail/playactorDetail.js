@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    playactorId: '',
     photos: {}, //相册
     relevantFiguresPhotos: [], //相关人物
     playactorDetail: null,
@@ -17,6 +18,7 @@ Page({
    */
   onLoad: function(options) {
     this.loadPlayactorDetail(options)
+    console.log(options.playactorId)
   },
 
   /**
@@ -51,6 +53,7 @@ Page({
           };
         };
         that.setData({
+          playactorId: options.playactorId,
           playactorDetail: res.data,
           relevantFiguresPhotos: peoples
         });
@@ -79,6 +82,15 @@ Page({
     var index = res.currentTarget.dataset.index;
     wx.navigateTo({
       url: '/pages/playactorDetail/playactorDetail?playactorId=' + this.data.relevantFiguresPhotos[index].id,
+    })
+  },
+
+  /**
+   * 全部照片
+   */
+  allPhotoTap() {
+    wx.navigateTo({
+      url: '/pages/images/images?playactorId=' + this.data.playactorId,
     })
   },
 

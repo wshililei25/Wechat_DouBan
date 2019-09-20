@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    num: 1,
     photos: null,
   },
 
@@ -14,7 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    let that = this;
+
     wx.setNavigationBarTitle({
       title: '剧照',
     });
@@ -23,6 +23,20 @@ Page({
       icon: 'loading',
       duration: 10000,
     });
+
+    if (options.playactorId == null || options.playactorId == '') {
+      this.loadMoviePhotos(options);
+    } else {
+      this.loadPlayactorPhotos(options);
+    }
+
+  },
+
+  /**
+   * 电影剧照
+   */
+  loadMoviePhotos(options) {
+    let that = this;
     wx.request({
       url: 'http://api.douban.com/v2/movie/subject/' + options.movieId + '/photos?apikey=0df993c66c0c636e29ecbb5344252a4a',
       method: 'GET',
@@ -36,7 +50,37 @@ Page({
         })
         wx.hideToast()
       }
+    })
+  },
 
+  /**
+   * 演员剧照
+   */
+  loadPlayactorPhotos(options) {
+    let that = this;
+    wx.request({
+      url: 'http://api.douban.com/v2/movie/celebrity/' + options.playactorId + '/photos?apikey=0df993c66c0c636e29ecbb5344252a4a',
+      method: 'GET',
+      header: {
+        'content-type': 'json'
+      },
+      success(res) {
+        console.log(res)
+        that.setData({
+          photos: res.data.photos
+        })
+        wx.hideToast()
+      }
+    })
+  },
+
+  /**
+   * swiper滑动监听
+   */
+  bindchangeSwiper(e) {
+    console.log(e)
+    this.setData({
+      num: e.detail.current + 1
     })
   },
 
